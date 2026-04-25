@@ -1,5 +1,9 @@
+function handleClick (todo){
+  alert (`${todo.data} clicked`)
+};
+
 function TodoItem(props) {
-  return <li> {props.todo.data}</li>
+  return <li onClick={()=>handleClick(props.todo)}> {props.todo.data}</li>
 }
 
 
