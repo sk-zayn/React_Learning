@@ -1,10 +1,17 @@
-function handleClick (todo){
-  alert (`${todo.data} clicked`)
-};
+import { useState } from "react";
+import './TodoItem.css'
 
 function TodoItem(props) {
-  return <li onClick={()=>handleClick(props.todo)}> {props.todo.data}</li>
-}
+  const [isFinished, setIsFinished]= useState(false)
+  return (
+    <div>
+      <li>
+        <span className={(isFinished)? 'todo-done' : 'todo-not-done'}>{props.todo.data}</span>
+      </li>
+      <button onClick={()=>setIsFinished(!isFinished)}>{(isFinished)? 'Redo': 'Done'}</button>
+    </div>
+  );
+};
 
 
 export default TodoItem;
