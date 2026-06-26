@@ -11,6 +11,10 @@ const Counter = () => {
     setNum(num - 1);
   };
 
+  const reset = ()=>{
+  setNum(0)
+  }
+
   return (
     <div className="flex flex-col p-10 gap-10 w-90 text-center font-bold text-3xl">
       <div className="bg-gray-300 p-8 ">{num}</div>
@@ -24,6 +28,9 @@ const Counter = () => {
         <button onClick={()=> decrement()} className="bg-blue-600 px-10 py-3 text-white rounded-full">
           -
         </button>
+        <button onClick={() => reset()} className="bg-blue-600 px-10 py-3 text-white rounded-full" >
+        Reset
+      </button>
       </div>
     </div>
   );
