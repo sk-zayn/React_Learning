@@ -7,6 +7,8 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Product from './pages/Product';
 import ErrorPage from './pages/ErrorPage';
+import Courses from './pages/Courses';
+import CourseDetails from './pages/CourseDetails';
 
 
 
@@ -19,6 +21,8 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/product' element={<Product /> } />
+        <Route path='/courses' element={<Courses /> } />
+        <Route path='/courses/:id' element={<CourseDetails /> } />
 
         <Route path='/*' element={<ErrorPage /> } />
       </Routes>
